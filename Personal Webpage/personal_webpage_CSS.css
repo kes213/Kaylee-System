@@ -1,0 +1,16 @@
+@page {margin: 3cm}
+head {
+background-color:#9775AA; color:black}
+
+body {
+background-color:#9775AA; color:black}
+
+hr {color:#3D1255}
+
+div#list {background-color:#3D1255; color:white; max-width:50%; margin:auto; float:left; overflow:hidden}
+div#lilacs {display:block; width:25%; height:25%; float:right; overflow:hidden}
+
+div#harlem {background-color:#3D1255; color:white}
+
+div#flowers {width:50%; margin:auto}
+img {width: 100%; margin:auto}
