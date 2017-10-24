@@ -1,0 +1,6 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = results
+results = element results {place+}
+place = element place {name, xsd:int}
+name = attribute name {"NYC" | "Mexico" | "London" | "Rome"}

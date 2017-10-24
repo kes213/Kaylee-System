@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-model href="stinebiser_schematronEx1.rnc" type="application/relax-ng-compact-syntax"?>
+<?xml-model href="stinebiser_schematronEx1.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+
+<results>
+    <place name="NYC">25</place>
+    <place name="NYC">25</place>    
+    <place name="Rome">25</place>
+    <place name="London">25</place>
+</results>

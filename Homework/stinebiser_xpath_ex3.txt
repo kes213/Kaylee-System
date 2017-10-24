@@ -1,0 +1,64 @@
+Kaylee Stinebiser
+Xpath Exercise 3
+
+
+1A)
+I have to use the count function here. This expression counts all of the type attributes over the whole document, walking down the entire tree. 
+count(//@type)
+
+1B)
+To climb back up the tree and return the elements containing the type attributes, I used this expression:
+//@type/parent::*
+
+1C)
+The double slash tells Xpath to scan the whole tree for every type attribute, and then the parent:: axis climbs a step up to the elements containing those attributes.
+The name function gives me their names -- <div> elements. 
+//@type/parent::*/name()
+
+1D)
+distinct-values(//@type/parent::*/name())
+This gets rid of any duplicates that came with the first return, and I find that all of them are contained in <div> elements. 
+
+2A)
+Again, the * tells Xpath to give me all results, and the double slash scans the entire tree. 
+//attribute::*
+
+2B)
+The name function takes me off of the tree and only shows the literal names of the attributes, rather than selecting the attributes on the XML document. 
+//attribute::*/name()
+
+2C)
+This function removes the duplicate values and returns the different attribute names only once.
+distinct-values(//attribute::*/name())
+
+
+2D)
+//body//attribute::*/parent::*
+
+2E)
+//body//attribute::*/parent::*/name()
+
+2F) There are 12 distinct values for the elements containing any attribute. 
+count(distinct-values(//body//attribute::*/parent::*/name()))
+
+
+3A
+(//p[count(geo[@select="lat"]) gt 2])[last()]
+It took a lot of tries to get me to this expression, most of which I posted to the DH Class Hub issues board already, so I won't repost them here. 
+
+3B)
+(//p[count(geo[@select="lat"]) gt 2])[1]
+Here, because the entire expression before the 1 is wrapped in parenthesis, Xpath should walk the whole tree and find the first result of the results in the parenthesis. 
+
+3C)
+//div[@type="book"][2]//p[count(geo[@select="lat"]) gt 2])[last()]
+
+3D)
+(//p[count(geo[@select="lat"]) and count(placeName) gt 2])[1]
+
+3E)
+I know I would need the distinct values function here, but I'm not sure how to write it into the expression. I used these, but I got errors and I don't know
+what else to try.  
+distinct-values(//p[count(geo[@select="lat"]) and count(placeName) gt 2])[1])
+//p[count(geo[@select="lat"]) and count((distinct-values(placeName)) gt 2])[1]
+(//p[count(geo[@select="lat"]) and distinct-values(count(placeName) gt 2)])[1]

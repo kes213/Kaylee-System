@@ -1,0 +1,21 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = poem
+poem = element poem {header, content}
+header = element header {title, byLine}
+title = element title {text}
+byLine = element byLine {poet, text}
+poet = attribute poet {"McKay_C"} #Though there is only one person/name in this piece, I'm identifying
+                                  # the poet because I'm imagining how this would work if I were coding this poem
+                                  # for the project proposal I made. I would be focusing on only 4 or 5 Renaissance poets,
+                                  # so I would list all of their names on this part because they are the only poets
+                                  # who's work the team would and should be working with. 
+content = element content {line+} 
+line = element line {n, stanza*, mixed{(punc | figLang)*}} #The same idea goes for me adding stanza here. This poem is all in one stanza, but other poems we code might have more than one,
+                                  # so stanza would be an important attribute. 
+n = attribute n {xsd:int}
+stanza = attribute stanza {xsd:int}
+punc = element punc {type, text}
+figLang = element figLang {form, text}
+type = attribute type {"comma" | "period" | "open_parenthesis" | "closed_parenthesis" | "semicolon" | "colon"}
+form = attribute form {"metaphor" | "simile" | "personification" | "alliteration"}

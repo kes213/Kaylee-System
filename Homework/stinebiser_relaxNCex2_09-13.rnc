@@ -1,0 +1,14 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = letter
+letter = element letter {header, body}
+header = element header {dateLine, salutation}
+dateLine= element dateLine {date, text}
+date = attribute date {text}
+salutation = element salutation {text}
+body = element body {p+, signature}
+p = element p {n, text}
+n = attribute n {text}
+page = attribute page {text}
+signature = element signature {text}
+

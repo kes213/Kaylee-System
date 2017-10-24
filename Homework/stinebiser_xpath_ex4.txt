@@ -1,0 +1,69 @@
+Kaylee Stinebiser
+XPath Exercise 4
+
+1) 
+The string-join function will string together the authors in one list, and I insert the semicolon in the first argument space to separate them by semicolons.
+string-join(//bibl/author, '; ')
+
+2A)
+The contains() function searches for the word 'homework' in all <div> elements in the whole tree. I got 18 results. 
+//div[contains(., "homework")]
+
+
+2B)
+I have no idea how to write this expression, if I'm being honest. I know I need the descendant:: branch and the text() function, but I don't know how to correctly
+write it in an expression. I based all of these off of my previous answer. 
+//div[descendant::contains(., "homework")]
+//div[contains(., "homework")]/descendant::
+
+3A)
+This expression returns the Fridays on the schedule. 
+//body//div[@type="week"]/div[matches(., "F [0-9]")]//date
+
+3B)
+Because the yyyy-mm-dd date is on the when attribute, stopping on those attributes returns the dates in the descriptions. 
+//body//div[@type="week"]/div[matches(., "F [0-9]")]//date/@when
+
+3C)
+I can't figure this one out either. I know I need the string-join() function, but I don't know how to apply it here. This is what I tried. 
+I did this based on the expression in the example on the DH Class Hub wiki page.
+string-join(//body//div[@type="week"]/div[matches(., "F [0-9]")]//date/@when, , ) 
+This one I just tried to see what I would get, and it told me it failed due to unexpected "" at the start of the expression, which I don't understand at all because
+I used the same base expression from the previous question and I didn't add any "". 
+//body//div[@type="week"]/div[matches(., "F [0-9]")]//date/string-join(@when, , ) 
+//body//div[@type="week"]/div[matches(., "F [0-9]")]//date/string-join(@when, ', ')
+(//body//div[@type="week"]/div[matches(., "F [0-9]")]//date/string-join(@when), ', ') 
+
+4A)
+//body//div[@type="assign"][matches(., "GitHub")]
+
+4B)
+I honestly didn't know where to start for this expression. I looked on the DH Class Hub wiki as well as the XPath function link on the syllabus, and neither
+had an example of the max() or min() functions, so I'm unsure how to write these into an expression. I wrapped them in a bunch of ways, but I couldn't get any results. 
+I would really like to have an explanation of this one in class because I'm 100% lost. 
+max(//body//div[@type="assign"][matches(., "GitHub")])
+min(//body//div[@type="assign"][matches(., "GitHub")])
+//body//max(div[@type="assign"][matches(., "GitHub")])
+string-length(//body//max(div[@type="assign"][matches(., "GitHub")/max()
+Some of the error messages I got implied that I needed to use the count() function here to compare a number, but I don't think that's what the question is asking . . .
+I don't know where the string-length() would fit in, either. 
+
+5A)
+I read on one of the links that F stands for days of the week when using it within the format-date() function, so I used it here. 
+//@when/format-date(xs.date(.), '[F]')
+//@when/format-date('xs:date(.)', '[F]')
+I modeled this exactly from the example on the exercise page, but it told me it doesn't recognize xs.date as a date. I also tried these:
+//@when="xs.date"format-date((.), '[F]')
+All of these gave me errors.
+
+5B)
+Because I couldn't get the first part of this question, I don't know what to try here. I did my best. 
+//@when/matches(format-date('xs:date(.)', '[F]'))
+//@when-"xs:date"[matches(format-date('xs:date(.)', '[F]'))]
+
+I really struggled with a lot of the questions on this exercise. What confuses me is where I need to be putting the functions in order to form a correctly-formatted
+Xpath expression. I receive a lot of errors due to my syntax. I just don't understand how to put them together. A lot of the lists of examples that I tried are not
+complete because I tried to tweak these expressions so many times I don't remember what all I did. At the end of this exercise, I'm very discouraged and I think I
+would benefit from another verbal explanation of how these functions can be written into Xpath expressions. Sometimes as I try to read the links and webpages that are
+on the exercise, I find myself getting lost and unable to comprehend what I should be typing into the Xpath bar. I didn't post every question to the DH Class Hub
+becuase I know the goal is for us to figure it out on our own, and I had a problem with consecutive questions. I did my best independently. 

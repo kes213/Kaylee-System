@@ -1,0 +1,46 @@
+Kaylee Stinebiser
+XPath Exercise 2
+
+1) 
+An expression that finds only the longitute attribute values in the first book is:
+//body//div[@type="book"][1]//p/geo[@select="lat"]
+I found this by first navigating to the books, and then telling Xpath that I only wanted the first of those results. After that, I was able to climb down
+the tree within only that book. I got 42 results using this expression. 
+
+2)
+Because the <p> elements are parent nodes to the <geo> elements, all I have to do is add 
+parent::*
+to the expression I used to the previous expression to jump back to the paragraphs surrounding the <geo select="lat"> tags. The full expression is:
+//body//div[@type="book"][1]//p/geo[@select="lat"]/parent::*
+
+3)
+I needed to tell Xpath to return the third result from the type="book" attribute, and then the first result of the type="chapter" attribute, so I put
+the respective numbers in square brackets. Then, I navigated to the lattitude attribute values in the <geo> tags once again, but because I wanted
+Xpath to give me the first result within the paragraphs, I had to put that part in parenthesis so that Xpath only ran the expression for that specific section.
+//body//div[@type="book"][3]/div[@type="chapter"][1]/(p/geo[@select="lat"])[1]
+The number of this paragraph is 702.
+
+4)
+To select the <geo> tags throughout the entire document, I used this expression:
+//geo
+This expression told Xpath to search the entire tree, beginning with the root element and going downwards. Then, to jump up a branch to the paragraphs that
+hold the lattitudes and longitudes, I used this expression:
+//geo/parent::*
+
+5)
+I was unable to find an xpath expression that solved this question. I tried these options, and all of them failed:
+//p/geo[@select="long"][not(geo[@select='lat'])]
+//geo[@select="lon"]not(@select="lat")]
+//p[geo[@select="lon"][not(descendant::geo[@select='lat'])]
+//geo[@select="lon"]/parent::*not(geo[@select="lat"])
+//geo[@select="lon"]//parent::*-geo[@select="lat"]
+//p[geo not(@select="lat")]
+I tried tons of differnt combinations with the not function and the - symbol which is supposed to mean subtraction. Nothing worked and I was unsure how to proceed. 
+
+6)
+The first expression 
+//p[geo]/placeName[1]
+is applying the [1] to only the <placeName> tags, so it's selecting only the first <placeName> in every paragraph. However, the second expression
+(//p[geo]/placeName)[1]
+is applying the [1] to select all of the elements in the parenthesis, so that tells Xpath to look for the first <placeName> in the first <p> containing <geo>.
+seems to be returning 

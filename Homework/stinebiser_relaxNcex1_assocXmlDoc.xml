@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="Relax%20NC%20Exercise%201.rnc" type="application/relax-ng-compact-syntax"?>
+<poem>
+    <title type="villanelle">Do Not Go Gentle Into That Good Night</title>
+    <author date="1951" source="The Collected Poems of Dylan Thomas">Dylan Thomas</author>
+    <content> <!-- This is a change I made from the first time I submitted this as XMLex3. I added content as an element to make the actual content of the poem more distinct from the author, etc. -->
+        <line stanza="1" n="1" theme="perserverance">Do not go gentle into that good night,</line>
+        <line stanza="1" n="2" imagery="dark">Old age should burn and rave at close of day;</line>
+        <line stanza="1" n="3" imagery="dark" theme="perserverance">Rage, rage against the dying of the light.</line>
+
+        <line stanza="2" n="4" imagery="dark">Though wise men at their end know dark is right,</line>
+        <line stanza="2" n="5" imagery="light">Because their words had forked no lightning they</line>
+        <line stanza="2" n="6" theme="perserverance">Do not go gentle into that good night.</line>
+
+        <line stanza="3" n="7" imagery="light">Good men, the last wave by, crying how bright</line>
+        <line stanza="3" n="8" theme="regret">Their frail deeds might have danced in a green bay,</line>
+        <line stanza="3" n="9" imagery="dark" theme="perserverance">Rage, rage against the dying of the light.</line>
+
+        <line stanza="4" n="10" imagery="light">Wild men who caught and sang the sun in flight,</line>
+        <line stanza="4" n="11" theme="grief">And learn, too late, they grieve it on its way,</line>
+        <line stanza="4" n="12" theme="perserverance">Do not go gentle into that good night.</line>
+
+        <line stanza="5" n="13" imagery="dark">Grave men, near death, who see with blinding sight</line>
+        <line stanza="5" n="14" imagery="light">Blind eyes could blaze like meteors and be gay,</line>
+        <line stanza="5" n="15" imagery="dark">Rage, rage against the dying of the light.</line>
+
+        <line stanza="6" n="16" theme="death">And you, my father, there on the sad height,</line>
+        <line stanza="6" n="17" theme="grief">Curse, bless, me now with your fierce tears, I pray.</line>
+        <line stanza="6" n="18" theme="perserverance">Do not go gentle into that good night.</line>
+        <line stanza="6" n="19" imagery="dark" theme="perserverance">Rage, rage against the dying of the light.</line>
+    </content> 
+</poem>

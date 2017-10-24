@@ -1,0 +1,16 @@
+datatypes xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+
+start = poem
+poem = element poem {title, author, content}
+title = element title {(type | text)*}
+author = element author {date, source, text}
+content = element content {line+}
+type = attribute type {text}
+date = attribute date {text}
+source = attribute source {text}
+line = element line {stanza, n, (theme | imagery)*, text}
+stanza = attribute stanza {"1" | "2" | "3" | "4" | "5" | "6"}
+n = attribute n {text}
+theme = attribute theme {text}
+imagery = attribute imagery {text}
+

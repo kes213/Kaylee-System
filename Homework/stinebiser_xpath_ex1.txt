@@ -1,0 +1,40 @@
+Kaylee Stinebiser
+XPath Exercise 1
+
+1. XPath can tell the books apart from the chapters because the <div> elements contain different attributes. The chapters are marked with a “chapter” attribute, while the books are marked with a “book” attribute, though both are marked with the <div> element. 
+To find only the books in the file, I used this expression: //body/div[@type="work"]/div[@type="book"]
+
+To find only the chapters in the file, I used this expression:
+//body/div[@type="work"]/div[@type="book"]/div[@type="chapter"]
+
+To find only the chapters in Book 2 of the file, I used this expression:
+//body/div[@type="work"]/div[@type="book"][2]/div[@type="chapter"]
+
+2. To identify the <head> element inside a chapter <div>, I used this expression:
+//body/div[@type="work"]/div[@type="book"]/div[@type="chapter"]/head
+
+To locate a <l> element inside a chapter <div>, I used this expression:
+//body/div[@type="work"]/div[@type="book"]/div[@type="chapter"]/head/l
+
+3. To find only note elements, I used this expression:
+//ref/note
+
+4. To locate the <placeName> elements only inside the <head> elements, I started with this expression: 
+//body/div/head/l/placeName
+However, that only selected the heads of the Preface and the overall book. This expression selected the <placeName> elements in all of the <head> elements, including the chapter heads: 
+//body//div/head/l/placeName
+
+To find the <placeName> elements only mentioned in notes, I used this expression:
+//note/placeName
+
+To find the <placeName> elements only in notes in Book 1, I used this expression:
+//body/div[@type="work"]/div[@type="book"][1]/div[@type="chapter"]/p/ref/note
+
+It took me a while to figure out that I had to work my way into the <ref> elements of the chapters in book 1 to find them. But once I did, I found 90 results. 
+
+
+
+
+ 
+
+
