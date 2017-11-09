@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--The total number of questions with yes/no (or yes but fined) responses is:
+        12
+        The maximum X value is:
+        720-->
+<!--The maximum Y value is: 
+        -500-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="800"
+     height="700"
+     viewBox="0 0 800 800">
+   <g transform="translate(60 700)">
+      <line x1="0"
+            y1="0"
+            x2="770"
+            y2="0"
+            stroke="black"
+            stroke-width="2"/>
+      <line x1="0"
+            y1="0"
+            x2="0"
+            y2="-500"
+            stroke="black"
+            stroke-width="2"/>
+      <text x="-30" y="-50" text-anchor="middle">10</text>
+      <line x1="0"
+            y1="-50"
+            x2="770"
+            y2="-50"
+            stroke="green"
+            stroke-width="1"
+            stroke-dasharray="10"/>
+      <text x="-30" y="-100" text-anchor="middle">20</text>
+      <line x1="0"
+            y1="-100"
+            x2="770"
+            y2="-100"
+            stroke="green"
+            stroke-width="1"
+            stroke-dasharray="10"/>
+      <text x="-30" y="-150" text-anchor="middle">30</text>
+      <line x1="0"
+            y1="-150"
+            x2="770"
+            y2="-150"
+            stroke="green"
+            stroke-width="1"
+            stroke-dasharray="10"/>
+      <text x="-30" y="-200" text-anchor="middle">40</text>
+      <line x1="0"
+            y1="-200"
+            x2="770"
+            y2="-200"
+            stroke="green"
+            stroke-width="1"
+            stroke-dasharray="10"/>
+      <text x="-30" y="-250" text-anchor="middle">50</text>
+      <line x1="0"
+            y1="-250"
+            x2="770"
+            y2="-250"
+            stroke="green"
+            stroke-width="1"
+            stroke-dasharray="10"/>
+      <text x="-30" y="-300" text-anchor="middle">60</text>
+      <line x1="0"
+            y1="-300"
+            x2="770"
+            y2="-300"
+            stroke="green"
+            stroke-width="1"
+            stroke-dasharray="10"/>
+      <text x="-30" y="-350" text-anchor="middle">70</text>
+      <line x1="0"
+            y1="-350"
+            x2="770"
+            y2="-350"
+            stroke="green"
+            stroke-width="1"
+            stroke-dasharray="10"/>
+      <text x="-30" y="-400" text-anchor="middle">80</text>
+      <line x1="0"
+            y1="-400"
+            x2="770"
+            y2="-400"
+            stroke="green"
+            stroke-width="1"
+            stroke-dasharray="10"/>
+      <text x="-30" y="-450" text-anchor="middle">90</text>
+      <line x1="0"
+            y1="-450"
+            x2="770"
+            y2="-450"
+            stroke="green"
+            stroke-width="1"
+            stroke-dasharray="10"/>
+      <text x="-30" y="-500" text-anchor="middle">100</text>
+      <line x1="0"
+            y1="-500"
+            x2="770"
+            y2="-500"
+            stroke="green"
+            stroke-width="1"
+            stroke-dasharray="10"/>
